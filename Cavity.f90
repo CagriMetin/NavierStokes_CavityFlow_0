@@ -51,7 +51,7 @@ program main
 
     enddo
 
-    call writeFile(u, v, x, y, nx, ny)
+    call writeFile(u, v, p, x, y, nx, ny)
 
 
     contains
@@ -180,9 +180,9 @@ program main
     end subroutine boundaryConditions
 
 
-    subroutine writeFile(u, v, x, y, nx, ny)
+    subroutine writeFile(u, v, p, x, y, nx, ny)
         integer, intent(in) :: nx, ny
-        real(8), dimension(nx,ny), intent(in) :: u, v
+        real(8), dimension(nx,ny), intent(in) :: u, v, p
         real(8), dimension(nx), intent(in) :: x
         real(8), dimension(ny), intent(in) :: y
 
